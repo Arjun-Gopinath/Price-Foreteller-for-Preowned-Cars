@@ -6,19 +6,14 @@ A machine learning based model that can be used to predict the price of your use
  
 ## Modules used
 
-### For Training and Testing dataset
+### For ML model creation
 
-* Jupyter Notebook
-* Scikit
-* Pandas
-* Python
-* Anaconda
-* Numpy
+* Anaconda - (Jupyter Notebook,Scikit,Pandas,Python3,Numpy)
 * LightGBM
 
-### For Website predicting price of used car
+### For creating a website that predicts the price of used car
 
-* Python
+* Python3
 * Flask
 * requests
 * jsonify
@@ -60,5 +55,7 @@ A machine learning based model that can be used to predict the price of your use
 1 - Second
 2 - Fourth & Above
 3 - Third
+
+
 
 *Update index.html accordingly
