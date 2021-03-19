@@ -7,7 +7,6 @@ body{
 }
 
 .main{
-    background-color:teal;
     width: 75%;
     height: 100%;
     margin: 2%;
@@ -27,23 +26,17 @@ body{
     box-shadow: 2px 5px 2px;
 }
 
-.container .h2{
+.container h2{
     text-shadow: 10px;
+    font-size: 250%;
     font-style: 'Garamond','sans-serif';
 }
 
-.main .container:hover{
-    background-color:green;
-}
-
-.main .container:hover h2{
-    color:white;
-    font-size: 200%;
-}
 
 /* Prediction Container*/
 
 .prediction{
+    background-color:white;
     margin: 2%;
     padding: 2%;
     width: auto;
@@ -73,11 +66,10 @@ form{
     background-color: #24243e;
 }
 
-.image{
+.main{
     padding: 2%;
     margin: 2%;
     border-radius:20px 20px 20px 20px;
-    background-image: url('./images/back.jpg');
 }
 
 .contain{
@@ -86,7 +78,8 @@ form{
     padding: 2%;
     margin: 4%;
     border-radius:20px 20px 20px 20px;
-    background-color: grey;
+    background-color:white;
+    background-image: url('./images/back.jpg');
 }
 
 .contain input{
@@ -94,6 +87,14 @@ form{
     height: 10%;
     font-size: 20px;
     text-align: center;
+}
+
+.contain h3{
+    font-size:200%;
+}
+
+.contain h4{
+    font-size:150%;
 }
 
 #box {
@@ -132,17 +133,21 @@ button{
 }
 
 #sub {
-    width: 20%;
+    width: 25%;
     height: 5%;
     text-align: center;
-    color:white;
+    color:black;
+    font-family: cursive;
     border-radius: 14px;
-    font-size: 100%;
+    font-size: 150%;
 }
 
-#sub:hover{
-    color: black;
+.button:hover{
+
 }
-
-
+@media only screen and (max-width: 768px){
+    body{
+        width: 100%;
+    }
+}
 

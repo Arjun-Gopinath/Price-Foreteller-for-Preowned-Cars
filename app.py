@@ -13,7 +13,7 @@ model = pickle.load(open('lightGBM_regressor.pkl', 'rb'))
 def Home():
     return render_template('index.html')
 
-# Page after prediction
+# Prediction
 
 
 @app.route("/predict", methods=['POST'])
