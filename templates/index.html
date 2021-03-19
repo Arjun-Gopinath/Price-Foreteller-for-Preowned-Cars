@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/index.css" >
+
+    <title>Used Cars Price Prediction</title>
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="container">
+            <h2>USED CAR'S PRICE ESTIMATOR</h2>
+        </div>
+    
+        <div class="prediction">
+            <h1>{{ prediction_text }}<h1>            
+        </div>
+
+        <form action="{{ url_for('predict')}}" method="post">
+
+            <!--Location-->
+
+            <div class="contain">
+                <h3>Location</h3>
+                <select name="Location" id="fuel" required="required">
+                    <option value="0">Mumbai</option>
+                    <option value="1">Pune</option>
+                    <option value="2">Chennai</option>
+                    <option value="3">Coimbatore</option>
+                    <option value="4">Hyderabad</option>
+                    <option value="5">Jaipur</option>
+                    <option value="6">Kochi</option>
+                    <option value="7">Kolkata</option>
+                    <option value="8">Delhi</option>
+                    <option value="9">Bangalore</option>
+                    <option value="10">Ahmedabad</option>
+                </select>
+            </div>
+
+            <!--Year-->
+
+            <div class="contain">
+                <h3>Year of Purchase</h3>
+                <input name="Year" type="number ">
+            </div>
+            
+            <!--Kilometers Driven-->
+
+            <div class="contain">
+                <h3>How Many Kilometers Driven ?</h3>
+                <input name="Kilometers_Driven" required="required">
+            </div>
+            
+            <!--Fuel Type-->
+            <div class="contain">
+
+                <h3>What is the Fuel type?</h3>
+                <select name="Fuel_Type" id="fuel" required="required">
+                    <option value="0">CNG</option>
+                    <option value="1">Diesel</option>
+                    <option value="2">Petrol</option>                    
+                    <option value="3">LPG</option>
+                    <option value="4">Electric</option>
+                </select>
+            </div>
+
+            <!--Transmission Type-->
+
+            <div class="contain">
+                <h3>Transmission type</h3>
+                <select name="Transmission" id="fuel" required="required">
+                    <option value="0">Manual</option>
+                    <option value="1">Automatic</option>
+                </select>
+            </div>
+
+            <!--Owner Type-->
+
+            <div class="contain">
+                <h3>How many people owned this car?</h3>
+                <select name="Owner_Type" id="fuel" required="required">
+                    <option value="0">First</option>
+                    <option value="1">Second</option>
+                    <option value="3">Third</option>
+                    <option value="2">Fourth & Above</option>
+                </select>
+            </div>
+
+            <!--Mileage-->
+
+            <div class="contain">
+                <h3>Mileage (in kmpl)</h3>
+                <input name="Mileage" required="required">
+            </div>
+
+            <!--Engine-->
+
+            <div class="contain">
+                <h3>Engine (in CC)</h3>
+                <input name="Engine" required="required">
+            </div>
+
+            <!--Power-->
+
+            <div class="contain">
+                <h3>Power (in bhp)</h3>
+                <input name="Power" required="required">
+            </div>
+
+            <!--Seats-->
+
+            <div class="contain">
+                <h3>Seats</h3>
+                <input name="Seats" required="required">
+            </div>
+
+            <!--Price-->
+
+            <div class="contain">
+                <h3>What is the Price of the car ?( in lakhs)</h3>
+                <h4>(Example: &#8377 1,00,000 = 1 )</h4>
+                <input name="Price" required="required">
+            </div>
+
+            <!--Submit-->
+
+            <div class="button">
+                <button style= background-color:Green id="sub" type="submit ">Estimate Selling Price </button>
+            </div>
+            
+            </div>
+        </form>
+
+    </div>
+
+</body>
+
+</html>

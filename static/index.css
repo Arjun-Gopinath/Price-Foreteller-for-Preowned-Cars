@@ -1,0 +1,148 @@
+body{
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    display: flex;
+    justify-content: center;
+}
+
+.main{
+    background-color:teal;
+    width: 75%;
+    height: 100%;
+    margin: 2%;
+    border-radius:20px 20px 20px 20px;
+    text-align: center;
+}
+
+/* Heading Container*/
+
+.container{
+    margin:2%;
+    padding:2%;
+    background-color:lightgreen;
+    width: auto;
+    height: auto;
+    border-radius:20px 20px 20px 20px;
+    box-shadow: 2px 5px 2px;
+}
+
+.container .h2{
+    text-shadow: 10px;
+    font-style: 'Garamond','sans-serif';
+}
+
+.main .container:hover{
+    background-color:green;
+}
+
+.main .container:hover h2{
+    color:white;
+    font-size: 200%;
+}
+
+/* Prediction Container*/
+
+.prediction{
+    margin: 2%;
+    padding: 2%;
+    width: auto;
+    height: auto;
+    border-radius:20px 20px 20px 20px;
+    box-shadow: 5px 5px 5px 5px;
+}
+
+.prediction .h1{
+    font-size:100%;
+}
+
+.prediction:hover{
+    box-shadow: 2px 2px 2px 2px;
+}
+
+.prediction:hover .h1{
+    font-size: 200%;
+}
+
+/* Form Container*/
+
+form{
+    padding: 2%;
+    margin: 2%;
+    border-radius:20px 20px 20px 20px;
+    background-color: #24243e;
+}
+
+.image{
+    padding: 2%;
+    margin: 2%;
+    border-radius:20px 20px 20px 20px;
+    background-image: url('./images/back.jpg');
+}
+
+.contain{
+    width: auto;
+    height: auto;
+    padding: 2%;
+    margin: 4%;
+    border-radius:20px 20px 20px 20px;
+    background-color: grey;
+}
+
+.contain input{
+    border-radius: 10px 10px 10px 10px;
+    height: 10%;
+    font-size: 20px;
+    text-align: center;
+}
+
+#box {
+    border-radius: 60px;
+    border-color: 45px;
+    border-style: solid;
+    font-family: cursive;
+    text-align: center;
+    background-color: rgb(168, 131, 61);
+    font-size: medium;
+    position: absolute;
+    width: 700px;
+    bottom: 9%;
+    height: 850px;
+    right: 30%;
+    padding: 0px;
+    margin: 0px;
+    font-size: 14px;
+}
+
+#fuel {
+    width: 20%;
+    height: 10%;
+    border-radius: 14px;
+    text-align:center;
+    font-size: 100%;
+}
+
+#fuel:hover {
+    background-color: lightgreen;
+}
+
+button{
+    padding:3%;
+    margin-top:3%;
+}
+
+#sub {
+    width: 20%;
+    height: 5%;
+    text-align: center;
+    color:white;
+    border-radius: 14px;
+    font-size: 100%;
+}
+
+#sub:hover{
+    color: black;
+}
+
+
+
