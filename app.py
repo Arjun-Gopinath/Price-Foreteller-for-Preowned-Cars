@@ -1,12 +1,14 @@
 from flask import Flask, render_template, request, redirect, url_for
 import pickle
+import pandas as pd
+import numpy as np
 
 app = Flask(__name__)
-
+file = open('lightGBM_regressor.pkl', 'rb')
 # load lightGBM regression model
-model = pickle.load(open('lightGBM_regressor.pkl', 'rb'))
+model = pickle.load(file)
+file.close()
 # Landing Page
-predict_show = 0
 
 
 @app.route('/', methods=['GET'])
@@ -29,7 +31,7 @@ def Back():
 def predict():
 
     if request.method == 'POST':
-
+        y_pred_totlgb = []
         Location = int(request.form['Location'])
 
         Year = int(request.form['Year'])
@@ -37,13 +39,13 @@ def predict():
 
         Kilometers_Driven = int(request.form['Kilometers_Driven'])
 
-        Brand_Name = int(request.form['Brand_Name'])
+        Brand = int(request.form['Brand_Name'])
 
         Fuel_Type = int(request.form['Fuel_Type'])
 
         Transmission = int(request.form['Transmission'])
 
-        Owner_Type = str(request.form['Owner_Type'])
+        Owner_Type = int(request.form['Owner_Type'])
 
 # Mileage
 
@@ -71,23 +73,35 @@ def predict():
 
         Seats = float(request.form['Seats'])
 
-        Price = float(request.form['Price'])
+        data = [[Location,
+                 Year,
+                 Kilometers_Driven,
+                 Fuel_Type,
+                 Transmission,
+                 Owner_Type,
+                 Mileage,
+                 Engine,
+                 Power,
+                 Seats,
+                 Car_Age,
+                 Brand]]
 
-        prediction = model.predict([
-            [Location,
-             Year,
-             Kilometers_Driven,
-             Fuel_Type,
-             Transmission,
-             Owner_Type,
-             Brand_Name,
-             Mileage,
-             Engine,
-             Power,
-             Seats,
-             Car_Age]])
+        df = pd.DataFrame(data, columns=['Location',
+                                         'Year',
+                                         'Kilometers_Driven',
+                                         'Fuel_Type',
+                                         'Transmission',
+                                         'Owner_Type',
+                                         'Mileage',
+                                         'Engine',
+                                         'Power',
+                                         'Seats',
+                                         'Car_Age',
+                                         'Brand'])
+        df['Year'] = df['Year'].astype('category')
 
-        output = round(prediction[0], 2)
+        lgbm_final = np.expm1(model.predict(df))
+        output = round(lgbm_final[0], 3)
         predict_show = 1
         if output < 0:
             return render_template('./index.html', prediction_text="Sorry you cannot sell this car")

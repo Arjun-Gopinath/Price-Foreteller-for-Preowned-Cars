@@ -21,7 +21,7 @@
             {% block content %}
             <h1>{{ prediction_text }}</h1>
             <div class="button">
-                <button style= background-color:LightBlue id="sub" onclick="window.location.href='{{ url_for( 'Back') }}';">Go Back</button>
+                <button style= background-color:LightBlue id="sub" onclick="window.location.href='{{ url_for( 'Back') }}';">To Predict Again, Go Back</button>
             </div>
             {% endblock content %}
         {% else  %}
@@ -165,14 +165,6 @@
             <div class="contain">
                 <h3>Seats</h3>
                 <input name="Seats" required="required">
-            </div>
-
-            <!--Price-->
-
-            <div class="contain">
-                <h3>Price of the car in lakhs</h3>
-                <h4>(Example: &#8377 1,25,000 = 1.25 )</h4>
-                <input name="Price" required="required">
             </div>
 
             <!--Submit-->
