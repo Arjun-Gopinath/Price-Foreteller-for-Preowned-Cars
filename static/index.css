@@ -1,7 +1,5 @@
 body{
-    background: #0f0c29;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    background-image: url('./back.jpg');
     display: flex;
     justify-content: center;
 }
@@ -9,7 +7,6 @@ body{
 .main{
     width: 75%;
     height: 100%;
-    margin: 2%;
     border-radius:20px 20px 20px 20px;
     text-align: center;
 }
@@ -19,7 +16,7 @@ body{
 .container{
     margin:2%;
     padding:2%;
-    background-color:lightgreen;
+    background-color:#6b5d79;
     width: auto;
     height: auto;
     border-radius:20px 20px 20px 20px;
@@ -45,16 +42,8 @@ body{
     box-shadow: 5px 5px 5px 5px;
 }
 
-.prediction .h1{
-    font-size:100%;
-}
-
-.prediction:hover{
-    box-shadow: 2px 2px 2px 2px;
-}
-
-.prediction:hover .h1{
-    font-size: 200%;
+.prediction h1{
+    font-size:180%;
 }
 
 /* Form Container*/
@@ -63,7 +52,8 @@ form{
     padding: 2%;
     margin: 2%;
     border-radius:20px 20px 20px 20px;
-    background-color: #24243e;
+    background-color:#3c435a;
+    box-shadow: 5px 5px 5px 5px;
 }
 
 .main{
@@ -76,17 +66,18 @@ form{
     width: auto;
     height: auto;
     padding: 2%;
+    border: 2px solid #000000;
     margin: 4%;
     border-radius:20px 20px 20px 20px;
-    background-color:white;
-    background-image: url('./images/back.jpg');
+    background-color:#6dbfc2;
+    box-shadow: 3px 3px 3px 3px;
 }
 
 .contain input{
     border-radius: 10px 10px 10px 10px;
     height: 10%;
     font-size: 20px;
-    text-align: center;
+    width: 75%;
 }
 
 .contain h3{
@@ -97,43 +88,26 @@ form{
     font-size:150%;
 }
 
-#box {
-    border-radius: 60px;
-    border-color: 45px;
-    border-style: solid;
-    font-family: cursive;
-    text-align: center;
-    background-color: rgb(168, 131, 61);
-    font-size: medium;
-    position: absolute;
-    width: 700px;
-    bottom: 9%;
-    height: 850px;
-    right: 30%;
-    padding: 0px;
-    margin: 0px;
-    font-size: 14px;
-}
 
 #fuel {
-    width: 20%;
+    width: 30%;
     height: 10%;
     border-radius: 14px;
-    text-align:center;
     font-size: 100%;
+    text-align-last: center;
 }
 
 #fuel:hover {
     background-color: lightgreen;
 }
 
-button{
+.button{
     padding:3%;
     margin-top:3%;
 }
 
 #sub {
-    width: 25%;
+    width: 75%;
     height: 5%;
     text-align: center;
     color:black;
@@ -142,12 +116,9 @@ button{
     font-size: 150%;
 }
 
-.button:hover{
-
-}
 @media only screen and (max-width: 768px){
     body{
-        width: 100%;
+        width: auto;
     }
 }
 

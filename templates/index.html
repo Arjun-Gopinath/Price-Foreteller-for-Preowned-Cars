@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../static/index.css" >
+    <link rel="stylesheet" href="../static/index.css" >
 
     <title>Used Cars Price Prediction</title>
 </head>
@@ -17,29 +17,79 @@
         </div>
     
         <div class="prediction">
-            <h1>{{ prediction_text }}<h1>            
+        {% if prediction_text %}
+            {% block content %}
+            <h1>{{ prediction_text }}</h1>
+            <div class="button">
+                <button style= background-color:LightBlue id="sub" onclick="window.location.href='{{ url_for( 'Back') }}';">Go Back</button>
+            </div>
+            {% endblock content %}
+        {% else  %}
+            <h1>Price will be predicted here</h1>
+        {% endif %}            
         </div>
 
-        <form action="{{ url_for('predict')}}" method="post">
+        <form action="{{ url_for('predict')}}" method="POST">
 
             <!--Location-->
 
             <div class="contain">
                 <h3>Location</h3>
                 <select name="Location" id="fuel" required="required">
-                    <option value="0">Mumbai</option>
-                    <option value="1">Pune</option>
+                    <option value="0">Ahmedabad</option>
+                    <option value="1">Bangalore</option>
                     <option value="2">Chennai</option>
                     <option value="3">Coimbatore</option>
-                    <option value="4">Hyderabad</option>
-                    <option value="5">Jaipur</option>
-                    <option value="6">Kochi</option>
-                    <option value="7">Kolkata</option>
-                    <option value="8">Delhi</option>
-                    <option value="9">Bangalore</option>
-                    <option value="10">Ahmedabad</option>
+                    <option value="4">Delhi</option>
+                    <option value="5">Hyderabad</option>
+                    <option value="6">Jaipur</option>
+                    <option value="7">Kochi</option>
+                    <option value="8">Kolkata</option>
+                    <option value="9">Mumbai</option>
+                    <option value="10">Pune</option>
                 </select>
             </div>
+
+            <!--Brand Name-->
+
+            <div class="contain">
+                <h3>Brand Name</h3>
+                <select name="Brand_Name" id="fuel" required="required">
+                    <option value="0">Ambassador</option>
+                    <option value="1">Audi</option>
+                    <option value="2">BMW</option>
+                    <option value="3">Bentley</option>
+                    <option value="4">Chevrolet</option>
+                    <option value="5">Datsun</option>
+                    <option value="6">Fiat</option>
+                    <option value="7">Force</option>
+                    <option value="8">Ford</option>
+                    <option value="9">Hindustan</option>
+                    <option value="10">Honda</option>
+                    <option value="11">Hyundai</option>
+                    <option value="12">ISUZU</option>
+                    <option value="13">Jaguar</option>
+                    <option value="14">Jeep</option>
+                    <option value="15">Lamborgini</option>
+                    <option value="16">LandRover</option>
+                    <option value="17">Mahindra</option>
+                    <option value="18">Maruti</option>
+                    <option value="19">Mercedes-Benz</option>
+                    <option value="20">MiniCooper</option>
+                    <option value="21">Mitsubishi</option>
+                    <option value="22">Nissan</option>
+                    <option value="23">OpelCorsa</option>
+                    <option value="24">Porshe</option>
+                    <option value="25">Renault</option>
+                    <option value="26">Skoda</option>
+                    <option value="27">Smart</option>
+                    <option value="28">Tata</option>
+                    <option value="29">Toyota</option>
+                    <option value="30">Volkswagen</option>
+                    <option value="31">Volvo</option>
+                </select>
+            </div>
+
 
             <!--Year-->
 
@@ -62,9 +112,8 @@
                 <select name="Fuel_Type" id="fuel" required="required">
                     <option value="0">CNG</option>
                     <option value="1">Diesel</option>
-                    <option value="2">Petrol</option>                    
-                    <option value="3">LPG</option>
-                    <option value="4">Electric</option>
+                    <option value="2">LPG</option>                    
+                    <option value="3">Petrol</option>
                 </select>
             </div>
 
@@ -73,8 +122,8 @@
             <div class="contain">
                 <h3>Transmission type</h3>
                 <select name="Transmission" id="fuel" required="required">
-                    <option value="0">Manual</option>
-                    <option value="1">Automatic</option>
+                    <option value="0">Automatic</option>
+                    <option value="1">Manual</option>
                 </select>
             </div>
 
@@ -84,9 +133,9 @@
                 <h3>How many people owned this car ?</h3>
                 <select name="Owner_Type" id="fuel" required="required">
                     <option value="0">First</option>
-                    <option value="1">Second</option>
+                    <option value="1">Fourth & Above</option>
+                    <option value="2">Second</option>
                     <option value="3">Third</option>
-                    <option value="2">Fourth & Above</option>
                 </select>
             </div>
 
@@ -129,7 +178,7 @@
             <!--Submit-->
 
             <div class="button">
-                <button style= background-color:White id="sub" type="submit ">Let's Predict</button>
+                <button style= background-color:LightBlue id="sub" type="submit">Let's Predict</button>
             </div>
             
             </div>

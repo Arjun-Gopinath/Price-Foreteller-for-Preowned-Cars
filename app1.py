@@ -1,17 +1,26 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 import pickle
 
 app = Flask(__name__)
 
 # load lightGBM regression model
 model = pickle.load(open('lightGBM_regressor.pkl', 'rb'))
-
 # Landing Page
+predict_show = 0
 
 
 @app.route('/', methods=['GET'])
 def Home():
     return render_template('index.html')
+
+# Go Back
+
+
+@app.route("/predict", methods=['GET'])
+def Back():
+    predict_show = 0
+    return redirect(url_for('Home'))
+
 
 # Prediction
 
@@ -27,6 +36,8 @@ def predict():
         Car_Age = 2020 - Year
 
         Kilometers_Driven = int(request.form['Kilometers_Driven'])
+
+        Brand_Name = int(request.form['Brand_Name'])
 
         Fuel_Type = int(request.form['Fuel_Type'])
 
@@ -69,6 +80,7 @@ def predict():
              Fuel_Type,
              Transmission,
              Owner_Type,
+             Brand_Name,
              Mileage,
              Engine,
              Power,
@@ -76,13 +88,15 @@ def predict():
              Car_Age]])
 
         output = round(prediction[0], 2)
+        predict_show = 1
         if output < 0:
-            return render_template('index.html', prediction_text="Sorry you cannot sell this car")
+            return render_template('./index.html', prediction_text="Sorry you cannot sell this car")
         else:
-            return render_template('index.html', prediction_text="You can sell your car at \u20B9 {} lakhs".format(output))
+            return render_template('./index.html', prediction_text="You can sell your car at \u20B9 {} lakhs".format(output))
     else:
-        return render_template('index.html')
+        return redirect(url_for('Home'))
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.debug = True
+    app.run('127.0.0.1', 8000)
