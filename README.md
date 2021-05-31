@@ -93,6 +93,7 @@ A machine learning based model that can be used to predict the price of your use
 
 * Download & Install [Anaconda](https://www.anaconda.com/)
 * Use Jupyter Notebook to run the file
+* OR
 * Use [Google Colab](https://colab.research.google.com/notebooks/) to run .ipynb files in the cloud.
 
 ## Steps for local deployment
