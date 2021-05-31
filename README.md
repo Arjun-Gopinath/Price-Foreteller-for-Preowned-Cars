@@ -2,8 +2,6 @@
 
 A machine learning based model that can be used to predict the price of your used car
  
-[Dataset used for the model](https://drive.google.com/file/d/1IhFTizIqTudQuovJd4NeiU3aaZXfjyxg/view?usp=sharing)
- 
 ## Modules used
 
 ### For ML model creation
@@ -29,6 +27,41 @@ A machine learning based model that can be used to predict the price of your use
 2 - Petrol
 3 - LPG
 4 - Electric
+
+#### Brand Name
+
+0 - Ambassador
+1 - Audi
+2 - BMW
+3 - Bentley
+4 - Chevrolet
+5 - Datsun
+6 - Fiat
+7 - Force
+8 - Ford
+9 - Hindustan
+10 - Honda
+11 - Hyundai
+12 - ISUZU
+13 - Jaguar
+14 - Jeep
+15 - Lamborgini
+16 - LandRover
+17 - Mahindra
+18 - Maruti
+19 - Mercedes-Benz
+20 - MiniCooper
+21 - Mitsubishi
+22 - Nissan
+23 - OpelCorsa
+24 - Porshe
+25 - Renault
+26 - Skoda
+27 - Smart
+28 - Tata
+29 - Toyota
+30 - Volkswagen
+31 - Volvo
 
 #### Location
 
@@ -56,6 +89,20 @@ A machine learning based model that can be used to predict the price of your use
 2 - Fourth & Above
 3 - Third
 
+## Steps to run .ipynb files
 
+* Download & Install [Anaconda](https://www.anaconda.com/)
+* Use Jupyter Notebook to run the file
+* Use [Google Colab](https://colab.research.google.com/notebooks/) to run .ipynb files in the cloud.
 
-*Update index.html accordingly
+## Steps for local deployment
+
+* Open cmd
+* Change directory to the place where the code is saved
+* run "python app.py" to deploy locally. 
+
+## Note:-
+
+* If changes in dataset is made, model might give out undesirable outputs.
+* Install all python modules mentioned above before running the project.
+* Output.xlsx gives output after prediction based on test data.
