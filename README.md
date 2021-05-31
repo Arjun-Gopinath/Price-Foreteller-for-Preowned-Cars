@@ -1,6 +1,6 @@
 # Used-Car-Price-Predictor
 
-A machine learning based model that can be used to predict the price of your used car
+A machine learning based prediction model that is used to predict the price of used cars based on data given by user.
  
 ## Modules used
 
@@ -9,14 +9,13 @@ A machine learning based model that can be used to predict the price of your use
 * Anaconda - (Jupyter Notebook,Scikit,Pandas,Python3,Numpy)
 * LightGBM
 
-### For creating a website that predicts the price of used car
+### For creating website
 
-* Python3
 * Flask
 * requests
 * jsonify
 * Pickle
-* HTML-CSS
+* HTML5-CSS
 
 ### Label encoding on features
 
@@ -107,3 +106,4 @@ A machine learning based model that can be used to predict the price of your use
 * If changes in dataset is made, model might give out undesirable outputs.
 * Install all python modules mentioned above before running the project.
 * Output.xlsx gives output after prediction based on test data.
+* While using the website, try to avoid giving vague inputs as it provides wrong results.
