@@ -108,4 +108,4 @@ A machine learning based prediction model that is used to predict the price of u
 * Output.xlsx gives output after prediction based on test data.
 * While using the website, try to avoid giving vague inputs as it provides wrong results.
 
-# The site is live [here](https://used-car-price-predictor.herokuapp.com/).
+# The site is [live](https://used-car-price-predictor.herokuapp.com/).
