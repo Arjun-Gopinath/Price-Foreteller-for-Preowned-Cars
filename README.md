@@ -1,4 +1,4 @@
-# Price-ForeTeller-For-Preowned-Cars
+# Price-Foreteller-For-Preowned-Cars
 
 A machine learning based prediction model that is used to predict the price of used cars based on data given by user.
  
