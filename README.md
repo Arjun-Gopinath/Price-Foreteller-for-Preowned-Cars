@@ -109,3 +109,4 @@ A machine learning based prediction model that is used to predict the price of u
 * While using the website, try to avoid giving vague inputs as it provides wrong results.
 
 # The site is [live](https://used-car-price-predictor.herokuapp.com/).
+# Video Narration for the project is available [here](https://www.youtube.com/watch?v=ArPTzNlqqkM).
